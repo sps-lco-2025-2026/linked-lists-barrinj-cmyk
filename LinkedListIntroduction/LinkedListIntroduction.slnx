@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="LinkedListIntroduction.Lib/LinkedListIntroduction.Lib.csproj" />
+  <Project Path="LinkedListIntroduction.Tests/LinkedListIntroduction.Tests.csproj" />
+</Solution>
