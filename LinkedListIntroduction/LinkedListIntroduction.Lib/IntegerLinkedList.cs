@@ -23,7 +23,14 @@ public class IntegerLinkedList
             _head = new IntegerNode(v);
         else
             _head.Append(v);
+    }
 
+    public void Prepend(int v)
+    {
+        if (_head == null)
+            _head = new IntegerNode(v);
+        else
+            _head.Prepend(v);
     }
 
     public override string ToString()
@@ -56,6 +63,18 @@ public class IntegerNode
             _next.Append(v);
     }
 
+    internal void Prepend(int v)
+    {
+        var newNode = new IntegerNode(v);
+        newNode._next = this;
+        _value = newNode._value;
+        _next = newNode._next;
+    }
+
+    internal void deletevalue(int v)
+    {
+        
+    }
     public override string ToString()
     {
         return _next == null ? _value.ToString() : $"{_value}, {_next}";
